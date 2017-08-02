@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     
     @IBAction func sliderValueChanged(_ sender: UISlider) {
         let tipValueInDigit = Int(tipTextField.text!)
-//        display!.text = String(sender.value)
         display!.text = String(Float(tipValueInDigit!) + Float(tipValueInDigit!) * sender.value)
     }
     
