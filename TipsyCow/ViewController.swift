@@ -9,17 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet weak var display: UILabel?
+    @IBOutlet weak var sliderValue: UISlider!
+    
+    @IBAction func sliderValueChanged(_ sender: UISlider) {
+        let tipValueInDigit = Int(tipTextField.text!)
+//        display!.text = String(sender.value)
+        display!.text = String(Float(tipValueInDigit!) + Float(tipValueInDigit!) * sender.value)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func tipEnteredAction(_ sender: UITextField){
+        display!.text = String(Float(sender.text!)! + Float(sender.text!)! * sliderValue.value)
     }
-
-
+    
+    @IBOutlet weak var tipTextField: UITextField!
 }
 
