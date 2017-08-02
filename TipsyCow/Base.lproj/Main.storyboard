@@ -80,7 +80,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="oSn-SH-CKR">
-                        <barButtonItem key="rightBarButtonItem" title="Settings" id="rrv-Jb-D5a"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="rrv-Jb-D5a">
+                            <connections>
+                                <segue destination="wwR-I1-98s" kind="show" id="LcR-dL-c5O"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -92,6 +96,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Klb-OQ-btf">
+            <objects>
+                <viewController id="wwR-I1-98s" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ULo-jv-Rm1"/>
+                        <viewControllerLayoutGuide type="bottom" id="dLK-Ts-OpL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KR8-31-HK8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbF-xY-UKL">
+                                <rect key="frame" x="137" y="243" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jG6-T7-Lgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1825" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xYk-Le-S2Q">
