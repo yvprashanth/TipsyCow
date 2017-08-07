@@ -22,12 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.10000000000000001" maxValue="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="nfk-bh-Bu8">
-                                <rect key="frame" x="14" y="145" width="347" height="31"/>
-                                <connections>
-                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="AFa-7I-8ZH"/>
-                                </connections>
-                            </slider>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="26" translatesAutoresizingMaskIntoConstraints="NO" id="Mxn-Vv-fS0">
                                 <rect key="frame" x="125" y="228" width="234" height="30"/>
                                 <nil key="textColor"/>
@@ -38,13 +32,13 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="snY-W6-5R0">
-                                <rect key="frame" x="16" y="233" width="87" height="20.5"/>
+                                <rect key="frame" x="16" y="233" width="87" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvJ-uE-Msn">
-                                <rect key="frame" x="16" y="83" width="102" height="20.5"/>
+                                <rect key="frame" x="16" y="83" width="102" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -55,26 +49,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wo9-fo-Gcc">
+                                <rect key="frame" x="16" y="161" width="343" height="29"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tipChangedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="3k1-tR-1VY"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="snY-W6-5R0" secondAttribute="leading" id="0vf-pC-O4D"/>
-                            <constraint firstItem="Mxn-Vv-fS0" firstAttribute="top" secondItem="nfk-bh-Bu8" secondAttribute="bottom" constant="53" id="BVG-tE-NbI"/>
+                            <constraint firstItem="Mxn-Vv-fS0" firstAttribute="top" secondItem="Wo9-fo-Gcc" secondAttribute="bottom" constant="39" id="COu-un-HnO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kfP-YA-k8d" secondAttribute="trailing" id="Dev-d7-6Jh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="snY-W6-5R0" secondAttribute="bottom" constant="369.5" id="Gkd-4Q-fbE"/>
                             <constraint firstItem="Mxn-Vv-fS0" firstAttribute="leading" secondItem="snY-W6-5R0" secondAttribute="trailing" constant="22" id="HBV-rJ-3Ss"/>
-                            <constraint firstItem="snY-W6-5R0" firstAttribute="top" secondItem="nfk-bh-Bu8" secondAttribute="bottom" constant="58" id="Igz-zD-SHv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mxn-Vv-fS0" secondAttribute="bottom" constant="365" id="OFn-Os-tSr"/>
+                            <constraint firstItem="Wo9-fo-Gcc" firstAttribute="top" secondItem="kfP-YA-k8d" secondAttribute="bottom" constant="49" id="QZu-ZF-v6J"/>
                             <constraint firstItem="lvJ-uE-Msn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="19" id="RYY-iB-shH"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kfP-YA-k8d" secondAttribute="trailing" id="Ub8-dA-udN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mxn-Vv-fS0" secondAttribute="trailing" id="aqc-SX-jWY"/>
-                            <constraint firstItem="nfk-bh-Bu8" firstAttribute="top" secondItem="kfP-YA-k8d" secondAttribute="bottom" constant="33" id="gRN-iQ-AXj"/>
-                            <constraint firstItem="nfk-bh-Bu8" firstAttribute="top" secondItem="lvJ-uE-Msn" secondAttribute="bottom" constant="41.5" id="mdb-nc-fXX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Wo9-fo-Gcc" secondAttribute="trailing" id="kHx-n0-lxk"/>
                             <constraint firstItem="kfP-YA-k8d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="pis-qd-XSm"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="nfk-bh-Bu8" secondAttribute="leading" id="qGR-0O-az3"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lvJ-uE-Msn" secondAttribute="leading" id="qli-KA-X1T"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Wo9-fo-Gcc" secondAttribute="leading" id="vWd-1r-VJ4"/>
                             <constraint firstItem="kfP-YA-k8d" firstAttribute="leading" secondItem="lvJ-uE-Msn" secondAttribute="trailing" constant="22" id="y9i-Ul-Wof"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="nfk-bh-Bu8" secondAttribute="trailing" id="yxs-bu-jtM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Mxn-Vv-fS0" secondAttribute="trailing" id="zID-gy-i2a"/>
                         </constraints>
                     </view>
@@ -89,7 +92,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="display" destination="kfP-YA-k8d" id="ss4-JH-tkE"/>
-                        <outlet property="sliderValue" destination="nfk-bh-Bu8" id="aC3-qX-Spx"/>
+                        <outlet property="tipAmountSelected" destination="Wo9-fo-Gcc" id="8hL-Av-6sQ"/>
                         <outlet property="tipTextField" destination="Mxn-Vv-fS0" id="GgC-3Q-MTP"/>
                     </connections>
                 </viewController>

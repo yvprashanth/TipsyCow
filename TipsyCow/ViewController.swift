@@ -10,17 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel?
-    @IBOutlet weak var sliderValue: UISlider!
     
-    @IBAction func sliderValueChanged(_ sender: UISlider) {
-        let tipValueInDigit = Int(tipTextField.text!)
-        display!.text = String(Float(tipValueInDigit!) + Float(tipValueInDigit!) * sender.value)
+    @IBAction func tipChangedAction(_ sender: UISegmentedControl) {
     }
-    
+   
     @IBAction func tipEnteredAction(_ sender: UITextField){
-        display!.text = String(Float(sender.text!)! + Float(sender.text!)! * sliderValue.value)
+
+        display!.text = String(Double(tipTextField.text!)! * Double(tipAmountSelected.titleForSegment(at: tipAmountSelected.selectedSegmentIndex)!)!)
     }
     
+    @IBOutlet weak var tipAmountSelected: UISegmentedControl!
     @IBOutlet weak var tipTextField: UITextField!
 }
 
