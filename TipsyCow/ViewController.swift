@@ -12,13 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel?
     
     @IBAction func tipChangedAction(_ sender: UISegmentedControl) {
+        let tipAmount = (tipAmountSelected.titleForSegment(at: tipAmountSelected.selectedSegmentIndex)!)
+        let tipAmountWithoutPercentage = tipAmount.characters.index(of: "%")
+        let tipAmountWithoutPercentageDigit = String(tipAmount.characters.prefix(upTo: tipAmountWithoutPercentage!))
+        
+        display!.text = String(Double(tipTextField.text!)! + Double(tipTextField.text!)! * Double(tipAmountWithoutPercentageDigit)! / 100)
     }
    
     @IBAction func tipEnteredAction(_ sender: UITextField){
         let tipAmount = (tipAmountSelected.titleForSegment(at: tipAmountSelected.selectedSegmentIndex)!)
         let tipAmountWithoutPercentage = tipAmount.characters.index(of: "%")
         let tipAmountWithoutPercentageDigit = String(tipAmount.characters.prefix(upTo: tipAmountWithoutPercentage!))
-        display!.text = String(Double(tipTextField.text!)! * Double(tipAmountWithoutPercentageDigit)!)
+        
+        display!.text = String(Double(tipTextField.text!)! + Double(tipTextField.text!)! * Double(tipAmountWithoutPercentageDigit)! / 100)
     }
     
     @IBOutlet weak var tipAmountSelected: UISegmentedControl!
