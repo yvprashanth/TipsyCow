@@ -11,12 +11,13 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var display: UILabel?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         let defaults = UserDefaults.standard
         let stringValue = defaults.object(forKey: "segmentedControlValue")
-        innerViewSettingsDisplay.selectedSegmentIndex = stringValue as! Int
-        // Do any additional setup after loading the view.
+        if stringValue != nil {
+            tipAmountSelected.selectedSegmentIndex = stringValue as! Int
+        }
     }
     
     @IBAction func tipChangedAction(_ sender: UISegmentedControl) {
