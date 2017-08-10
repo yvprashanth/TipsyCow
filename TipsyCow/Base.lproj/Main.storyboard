@@ -103,7 +103,7 @@
         <!--Settings View Controller-->
         <scene sceneID="Klb-OQ-btf">
             <objects>
-                <viewController id="wwR-I1-98s" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController id="wwR-I1-98s" customClass="SettingsViewController" customModule="TipsyCow" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ULo-jv-Rm1"/>
                         <viewControllerLayoutGuide type="bottom" id="dLK-Ts-OpL"/>
@@ -120,10 +120,16 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <connections>
+                                    <action selector="innerViewSettingsClick:" destination="wwR-I1-98s" eventType="valueChanged" id="GBT-uS-5cj"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="innerViewSettingsDisplay" destination="bTj-nk-gn9" id="Y1W-za-AUI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jG6-T7-Lgn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
