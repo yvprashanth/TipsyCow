@@ -22,7 +22,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/OJQsI7R.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://imgur.com/).
 
 ## Project Analysis
 
